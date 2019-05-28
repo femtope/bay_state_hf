@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> DataPro Agent | Nigeria</title>
+    <title>BAY States Health Facilities | Nigeria</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Bungee+Shade" rel="stylesheet">
@@ -37,65 +35,23 @@
         <aside class="main-sidebar main-sidebar-light sidebar_edit">
             <section class="sidebar">
             <div class="text-center">
-                <a target="_blank" href="http://datapronigeria.com/"><h1>DataPro</h1></a>
+                <a target="_blank" href="http://datapronigeria.com/"><h2>BAY States Health Facilities</h2></a>
             </div>
              <div class="alert alert-info sideColor">
                  <h4 class="info-box-number white"><i class="icon fa fa-globe fa-1x"></i>State</h4>
                       <div class="form-group-sm">
-                        <select name="state_scope" id="state_scope" onChange="getAdminLayers(); triggerUiUpdate();" class="form-control">
+                        <select name="state_scope" id="state_scope" onchange="getAdminLayers(); triggerUiUpdate();" class="form-control">
 <!--                            changecat(this.value); -->
                             <option value="">All</option>
-                            <option value="FCT_Abuja">FCT Abuja</option>
-                            <option value="Abia">Abia</option>
                             <option value="Adamawa">Adamawa</option>
-                            <option value="AkwaIbom">AkwaIbom</option>
-                            <option value="Anambra">Anambra</option>
-                            <option value="Bauchi">Bauchi</option>
-                            <option value="Bayelsa">Bayelsa</option>
-                            <option value="Benue">Benue</option>
                             <option value="Borno">Borno</option>
-                            <option value="Cross_River">Cross River</option>
-                            <option value="Delta">Delta</option>
-                            <option value="Ebonyi">Ebonyi</option>
-                            <option value="Edo">Edo</option>
-                            <option value="Ekiti">Ekiti</option>
-                            <option value="Enugu">Enugu</option>
-                            <option value="Gombe">Gombe</option>
-                            <option value="Imo">Imo</option>
-                            <option value="Jigawa">Jigawa</option>
-                            <option value="Kaduna">Kaduna</option>
-                            <option value="Kano">Kano</option>
-                            <option value="Katsina">Katsina</option>
-                            <option value="Kebbi">Kebbi</option>
-                            <option value="Kogi">Kogi</option>
-                            <option value="Kwara">Kwara</option>
-                            <option value="Lagos">Lagos</option>
-                            <option value="Nassarawa">Nassarawa</option>
-                            <option value="Niger">Niger</option>
-                            <option value="Ogun">Ogun</option>
-                            <option value="Ondo">Ondo</option>
-                            <option value="Osun">Osun</option>
-                            <option value="Oyo">Oyo</option>
-                            <option value="Plateau">Plateau</option>
-                            <option value="Rivers">Rivers</option>
-                            <option value="Sokoto">Sokoto</option>
-                            <option value="Taraba">Taraba</option>
                             <option value="Yobe">Yobe</option>
-                            <option value="Zamfara">Zamfara</option>
 
                         </select>
                     </div>
 
-                 <!--Prefecture DropDown-->
+                 <!--LGAs DropDown-->
                  <br>
-
-                 <h4 class="info-box-number white" readonly style="visibility:true"><i class="icon fa fa-user fa-1x"></i>Customer Name</h4>
-                    <div class="form-group-sm">
-                        <input type="text" id="customer_name" name="customerName" onkeyup="customerName();" class="form-control">
-                    </div>
-
-
-<!--
                  <h4 class="info-box-number white" id="prefecture_id" readonly style="visibility:true"><i class="icon fa fa-globe fa-1x"></i>Local Government Area</h4>
                       <div id="prefecture_id1" class="form-group-sm" readonly style="visibility:true">
                         <select name="lga_scope" id="lga_scope" onchange="getAdminLayers(); triggerUiUpdate();" class="form-control">
@@ -103,23 +59,27 @@
                             <option value="" disabled selected>All</option>
                         </select>
                     </div>
--->
 
+                 <br>
+
+                 <h4 class="info-box-number white" readonly="" style="visibility:true"><i class="icon fa fa-user fa-1x"></i>Health Facility Name</h4>
+                    <div class="form-group-sm">
+                        <input type="text" id="customer_name" name="customerName" onkeyup="customerName();" class="form-control">
+                    </div>
                  
                  <!--Company -->
                  <br>
-                 <h4 class="info-box-number white"><i class="icon fa fa-building fa-1x"></i>Bank Name</h4>
+                 <h4 class="info-box-number white"><i class="icon fa fa-building fa-1x"></i>Facility Types</h4>
                       <div class="form-group-sm">
                         <select id="bank_scope" onchange="getAdminLayers(); triggerUiUpdate();" class="form-control">
                             <option value="">All</option>
-                                <option value="Sterling">Sterling</option>
-                                <option value="Diamond">Diamond</option>
-                                <option value="Access">Access</option>
-                                <option value="Ecobank">Ecobank</option>
-                                <option value="Wema">Wema</option>
-                                <option value="GTB">GTB</option>
-                                <option value="Jaiz">Jaiz</option>
-                                <option value="Rosabon">Rosabon</option>
+                                <option value="HC">Health Clinic</option>
+                                <option value="PHC">Primary Health Care Centre</option>
+                                <option value="Secondary">Secndary Hospital</option>
+                                <option value="HP">Health Post</option>
+                                <option value="IDP">IDP Camp Clinics</option>
+                                <option value="Tertiary">Tertiary Hospital</option>
+                                <option value="Others">Others</option>
                         </select>
                       </div>
 
@@ -142,7 +102,7 @@
             </div>
           </section>
             <div class="logo_pad">
-                    <a target="_blank" href="http://datapronigeria.com/"><img  src="image/logo.JPEG" height="70" width="200"></a>
+                    <a target="_blank" href="http://datapronigeria.com/"><img src="image/logo.JPEG" height="70" width="200"></a>
             </div>
 
         </aside>
@@ -195,6 +155,6 @@
 <!--        <script src="node_modules/turf/turf.js"></script>-->
     </div>
     
+</div>
 </body>
-
 </html>
